@@ -302,6 +302,137 @@
                 </div>
               </div>
             </li>
+            <li>
+              <h2>Investor Support Form</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code12coll"
+                  aria-expanded="false"
+                  aria-controls="code12coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code12coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code12"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <h2>Confirm</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code13coll"
+                  aria-expanded="false"
+                  aria-controls="code13coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code13coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code13"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <h2>Payment pla</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code14coll"
+                  aria-expanded="false"
+                  aria-controls="code14coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code14coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code14"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <h2>Confirm Plans</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code15coll"
+                  aria-expanded="false"
+                  aria-controls="code15coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code15coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code15"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+              <h2>Create Web</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code16coll"
+                  aria-expanded="false"
+                  aria-controls="code16coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code16coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code16"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            </li>
+              <h2>Confirm</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code17coll"
+                  aria-expanded="false"
+                  aria-controls="code17coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code17coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code17"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
           </ol>
         </div>
       </section>
@@ -2615,6 +2746,606 @@ export default EditProfile;
         
         `;
 
+
+        let code12=`
+        import React, { useState } from 'react';
+
+interface InvestorSupportFormProps {
+  campaignId: string;
+  onSubmit: (data: SupportFormData) => void;
+}
+
+interface SupportFormData {
+  type: 'inkubasi' | 'hibah';
+  amount: number;
+  message: string;
+}
+
+const InvestorSupportForm: React.FC<InvestorSupportFormProps> = ({ campaignId, onSubmit }) => {
+  const [formData, setFormData] = useState<SupportFormData>({
+    type: 'inkubasi',
+    amount: 0,
+    message: '',
+  });
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Validation if needed
+    onSubmit(formData);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  return (
+    <form onSubmit={handleFormSubmit}>
+      <h2 className="text-xl font-semibold mb-2">Investor Support Form</h2>
+      <div className="mb-4">
+        <label htmlFor="type" className="block font-medium mb-1">
+          Support Type
+        </label>
+        <select
+          id="type"
+          name="type"
+          className="w-full p-2 border rounded"
+          value={formData.type}
+          onChange={handleInputChange}
+        >
+          <option value="inkubasi">Inkubasi</option>
+          <option value="hibah">Hibah</option>
+        </select>
+      </div>
+      <div className="mb-4">
+        <label htmlFor="amount" className="block font-medium mb-1">
+          Amount
+        </label>
+        <input
+          type="number"
+          id="amount"
+          name="amount"
+          className="w-full p-2 border rounded"
+          value={formData.amount}
+          onChange={handleInputChange}
+        />
+      </div>
+      <div className="mb-4">
+        <label htmlFor="message" className="block font-medium mb-1">
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows={4}
+          className="w-full p-2 border rounded"
+          value={formData.message}
+          onChange={handleInputChange}
+        ></textarea>
+      </div>
+      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        Submit
+      </button>
+    </form>
+  );
+};
+
+export default InvestorSupportForm;
+
+        `;
+
+
+        let code13 = `
+        import React, { useState } from 'react';
+
+interface InvestorDonation {
+  id: number;
+  investorName: string;
+  amount: number;
+  message: string;
+  investmentTarget: string; // Tujuan investasi ke entrepreneur
+}
+
+const DonationConfirmationPage: React.FC = () => {
+  const [donations, setDonations] = useState<InvestorDonation[]>([
+    {
+      id: 1,
+      investorName: 'John Doe',
+      amount: 5000,
+      message: 'Keep up the good work!',
+      investmentTarget: 'Supporting new product development',
+    },
+    {
+      id: 2,
+      investorName: 'Jane Smith',
+      amount: 3000,
+      message: 'Hope this helps!',
+      investmentTarget: 'Expanding market reach',
+    },
+    // Add more dummy data as needed
+  ]);
+
+  const handleConfirmation = (id: number) => {
+    // Handle confirmation logic, e.g., send confirmation to the server
+    console.log(*Donation with ID $*{id} confirmed!*);
+    // Remove the confirmed donation from the list
+    setDonations((prevDonations) => prevDonations.filter((donation) => donation.id !== id));
+  };
+
+  const handleRejection = (id: number) => {
+    // Handle rejection logic, e.g., send rejection to the server
+    console.log(*Donation with ID $*{id} rejected!*);
+    // Remove the rejected donation from the list
+    setDonations((prevDonations) => prevDonations.filter((donation) => donation.id !== id));
+  };
+
+  return (
+    <div>
+      <h1 className="text-2xl font-bold mb-4">Donation Confirmation Page</h1>
+      <table className="table-auto w-full border-collapse border">
+        <thead>
+          <tr className="bg-gray-100">
+            <th className="border p-2">Investor Name</th>
+            <th className="border p-2">Amount</th>
+            <th className="border p-2">Message</th>
+            <th className="border p-2">Investment Target</th>
+            <th className="border p-2">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {donations.map((donation) => (
+            <tr key={donation.id}>
+              <td className="border p-2">{donation.investorName}</td>
+              <td className="border p-2">{donation.amount}</td>
+              <td className="border p-2">{donation.message}</td>
+              <td className="border p-2">{donation.investmentTarget}</td>
+              <td className="border p-2">
+                <button
+                  className="bg-green-500 text-white px-4 py-2 rounded mr-2 hover:bg-green-600"
+                  onClick={() => handleConfirmation(donation.id)}
+                >
+                  Confirm
+                </button>
+                <button
+                  className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                  onClick={() => handleRejection(donation.id)}
+                >
+                  Reject
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default DonationConfirmationPage;
+
+        
+        `;
+
+        let code14 = `
+        import React, { useState } from 'react';
+
+interface Plan {
+  id: number;
+  name: string;
+  price: number;
+  features: string[];
+}
+
+const availablePlans: Plan[] = [
+  {
+    id: 1,
+    name: 'Basic Plan',
+    price: 100,
+    features: ['Feature 1', 'Feature 2'],
+  },
+  {
+    id: 2,
+    name: 'Pro Plan',
+    price: 200,
+    features: ['Feature 1', 'Feature 2', 'Feature 3'],
+  },
+  // Add more plans as needed
+];
+
+const EntrepreneurPurchasePage: React.FC = () => {
+  const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
+
+  const handlePlanSelection = (plan: Plan) => {
+    setSelectedPlan(plan);
+  };
+
+  const handlePurchase = () => {
+    // Handle purchase logic, e.g., send purchase request to the server
+    console.log(*Purchased Plan: $*{selectedPlan?.name}*);
+  };
+
+  return (
+    <div>
+      <h1 className="text-2xl font-bold mb-4">Entrepreneur Purchase Page</h1>
+      {selectedPlan ? (
+        <div>
+          <h2 className="text-xl font-bold mb-4">{selectedPlan.name}</h2>
+          <p className="text-gray-600 mb-4">Price: $*{selectedPlan.price}</p>
+          <h3 className="text-lg font-bold mb-2">Features:</h3>
+          <ul className="list-disc list-inside mb-4">
+            {selectedPlan.features.map((feature) => (
+              <li key={feature}>{feature}</li>
+            ))}
+          </ul>
+          <button
+            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            onClick={handlePurchase}
+          >
+            Purchase Plan
+          </button>
+        </div>
+      ) : (
+        <div>
+          <h2 className="text-xl font-bold mb-4">Choose a Plan:</h2>
+          {availablePlans.map((plan) => (
+            <div
+              key={plan.id}
+              className="bg-gray-100 px-4 py-2 mb-2 cursor-pointer hover:bg-gray-200"
+              onClick={() => handlePlanSelection(plan)}
+            >
+              {plan.name} - $*{plan.price}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default EntrepreneurPurchasePage;
+
+        `;
+
+        let code15=`
+        import React, { useState } from 'react';
+
+interface EntrepreneurPurchase {
+  id: number;
+  entrepreneurName: string;
+  planName: string;
+  planPrice: number;
+  features: string[];
+  status: 'pending' | 'confirmed' | 'rejected';
+}
+
+const pendingPurchases: EntrepreneurPurchase[] = [
+  {
+    id: 1,
+    entrepreneurName: 'John Doe',
+    planName: 'Basic Plan',
+    planPrice: 100,
+    features: ['Feature 1', 'Feature 2'],
+    status: 'pending',
+  },
+  {
+    id: 2,
+    entrepreneurName: 'Jane Smith',
+    planName: 'Pro Plan',
+    planPrice: 200,
+    features: ['Feature 1', 'Feature 2', 'Feature 3'],
+    status: 'pending',
+  },
+  // Add more pending purchases as needed
+];
+
+const AdminConfirmationPage: React.FC = () => {
+  const [purchases, setPurchases] = useState<EntrepreneurPurchase[]>(pendingPurchases);
+
+  const handleConfirmation = (id: number) => {
+    // Handle confirmation logic, e.g., send confirmation to the server
+    console.log(*Purchase with ID $*{id} confirmed!*);
+    // Update the status of the confirmed purchase in the list
+    setPurchases((prevPurchases) =>
+      prevPurchases.map((purchase) =>
+        purchase.id === id ? { ...purchase, status: 'confirmed' } : purchase
+      )
+    );
+  };
+
+  const handleRejection = (id: number) => {
+    // Handle rejection logic, e.g., send rejection to the server
+    console.log(*Purchase with ID $*{id} rejected!*);
+    // Update the status of the rejected purchase in the list
+    setPurchases((prevPurchases) =>
+      prevPurchases.map((purchase) =>
+        purchase.id === id ? { ...purchase, status: 'rejected' } : purchase
+      )
+    );
+  };
+
+  return (
+    <div>
+      <h1 className="text-2xl font-bold mb-4">Admin Confirmation Page</h1>
+      <table className="table-auto w-full border-collapse border">
+        <thead>
+          <tr className="bg-gray-100">
+            <th className="border p-2">Entrepreneur Name</th>
+            <th className="border p-2">Plan Name</th>
+            <th className="border p-2">Plan Price</th>
+            <th className="border p-2">Features</th>
+            <th className="border p-2">Status</th>
+            <th className="border p-2">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {purchases.map((purchase) => (
+            <tr key={purchase.id}>
+              <td className="border p-2">{purchase.entrepreneurName}</td>
+              <td className="border p-2">{purchase.planName}</td>
+              <td className="border p-2">{purchase.planPrice}</td>
+              <td className="border p-2">
+                <ul className="list-disc list-inside">
+                  {purchase.features.map((feature) => (
+                    <li key={feature}>{feature}</li>
+                  ))}
+                </ul>
+              </td>
+              <td className="border p-2">{purchase.status}</td>
+              <td className="border p-2">
+                {purchase.status === 'pending' && (
+                  <>
+                    <button
+                      className="bg-green-500 text-white px-4 py-2 rounded mr-2 hover:bg-green-600"
+                      onClick={() => handleConfirmation(purchase.id)}
+                    >
+                      Confirm
+                    </button>
+                    <button
+                      className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                      onClick={() => handleRejection(purchase.id)}
+                    >
+                      Reject
+                    </button>
+                  </>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default AdminConfirmationPage;
+
+        `;
+
+        let code16=`
+        import React, { useState } from 'react';
+
+interface Plan {
+  id: number;
+  name: string;
+  price: number;
+  features: string[];
+}
+
+const availablePlans: Plan[] = [
+  {
+    id: 1,
+    name: 'Basic Plan',
+    price: 100,
+    features: ['Feature 1', 'Feature 2'],
+  },
+  {
+    id: 2,
+    name: 'Pro Plan',
+    price: 200,
+    features: ['Feature 1', 'Feature 2', 'Feature 3'],
+  },
+  // Add more plans as needed
+];
+
+const EntrepreneurPurchasePage: React.FC = () => {
+  const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
+
+  const handlePlanSelection = (plan: Plan) => {
+    setSelectedPlan(plan);
+  };
+
+  const handlePurchase = () => {
+    // Handle purchase logic, e.g., send purchase request to the server
+    console.log(*Purchased Plan: $*{selectedPlan?.name}*);
+  };
+
+  return (
+    <div>
+      <h1 className="text-2xl font-bold mb-4">Entrepreneur Purchase Page</h1>
+      {selectedPlan ? (
+        <div>
+          <h2 className="text-xl font-bold mb-4">{selectedPlan.name}</h2>
+          <p className="text-gray-600 mb-4">Price: $*{selectedPlan.price}</p>
+          <h3 className="text-lg font-bold mb-2">Features:</h3>
+          <ul className="list-disc list-inside mb-4">
+            {selectedPlan.features.map((feature) => (
+              <li key={feature}>{feature}</li>
+            ))}
+          </ul>
+          <button
+            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            onClick={handlePurchase}
+          >
+            Purchase Plan
+          </button>
+        </div>
+      ) : (
+        <div>
+          <h2 className="text-xl font-bold mb-4">Choose a Plan:</h2>
+          {availablePlans.map((plan) => (
+            <div
+              key={plan.id}
+              className="bg-gray-100 px-4 py-2 mb-2 cursor-pointer hover:bg-gray-200"
+              onClick={() => handlePlanSelection(plan)}
+            >
+              {plan.name} - $*{plan.price}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default EntrepreneurPurchasePage;
+
+        `;
+
+
+        let code17=`
+        import React, { useState } from 'react';
+
+interface WebinarFormValues {
+  title: string;
+  linkZoom: string;
+  startDate: string;
+  day: string;
+  startTime: string;
+  endTime: string;
+}
+
+const WebinarForm: React.FC = () => {
+  const [formValues, setFormValues] = useState<WebinarFormValues>({
+    title: '',
+    linkZoom: '',
+    startDate: '',
+    day: '',
+    startTime: '',
+    endTime: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission logic, e.g., sending data to the server
+    console.log('Webinar Form Data:', formValues);
+  };
+
+  return (
+    <div>
+      <h1 className="text-2xl font-bold mb-4">Webinar Form</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-4">
+          <label htmlFor="title" className="block font-medium">
+            Webinar Title:
+          </label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            value={formValues.title}
+            onChange={handleChange}
+            className="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none focus:border-blue-500"
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="linkZoom" className="block font-medium">
+            Zoom Link:
+          </label>
+          <input
+            type="text"
+            id="linkZoom"
+            name="linkZoom"
+            value={formValues.linkZoom}
+            onChange={handleChange}
+            className="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none focus:border-blue-500"
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="startDate" className="block font-medium">
+            Start Date:
+          </label>
+          <input
+            type="date"
+            id="startDate"
+            name="startDate"
+            value={formValues.startDate}
+            onChange={handleChange}
+            className="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none focus:border-blue-500"
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="day" className="block font-medium">
+            Day:
+          </label>
+          <select
+            id="day"
+            name="day"
+            value={formValues.day}
+            onChange={handleChange}
+            className="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none focus:border-blue-500"
+          >
+            <option value="">Select Day</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+        </div>
+        <div className="mb-4">
+          <label htmlFor="startTime" className="block font-medium">
+            Start Time:
+          </label>
+          <input
+            type="time"
+            id="startTime"
+            name="startTime"
+            value={formValues.startTime}
+            onChange={handleChange}
+            className="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none focus:border-blue-500"
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="endTime" className="block font-medium">
+            End Time:
+          </label>
+          <input
+            type="time"
+            id="endTime"
+            name="endTime"
+            value={formValues.endTime}
+            onChange={handleChange}
+            className="border border-gray-400 px-4 py-2 rounded w-full focus:outline-none focus:border-blue-500"
+          />
+        </div>
+        <button
+          type="submit"
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Create Webinar
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default WebinarForm;
+
+        `;
+
       document.getElementById("code1").innerText = code1;
       document.getElementById("code2").innerText = code2;
       document.getElementById("code3").innerText = code3;
@@ -2626,6 +3357,12 @@ export default EditProfile;
       document.getElementById("code9").innerText = code9;
       document.getElementById("code10").innerText = code10;
       document.getElementById("code11").innerText = code11;
+      document.getElementById("code12").innerText = code12;
+      document.getElementById("code13").innerText = code13;
+      document.getElementById("code14").innerText = code14;
+      document.getElementById("code15").innerText = code15;
+      document.getElementById("code16").innerText = code16;
+      document.getElementById("code17").innerText = code17;
     </script>
   </body>
 </html>
