@@ -1,40 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meraki UI Template</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="component.html">Component</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link ative" aria-current="page" href="layout.html">Layout</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages.html">Pages</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="component.html">Component</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ative" aria-current="page" href="layout.html"
+                >Layout</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages.html">Pages</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
         </div>
-      </nav>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-</body>
+      </div>
+    </nav>
+
+    <main>
+      <section>
+        <div class="container">
+          <h2>Register Process</h2>
+        <div class="card p-4 bg-dark text-white">
+            <span id="code1"></span>
+        </div>
+      </section>
+    </main>
+    <script>
+      let code1 = `
+      import React, { useState } from 'react';
+
+const RegisterProcess: React.FC = () => {
+  const [currentStep, setCurrentStep] = useState(1);
+
+  const handleNext = () => {
+    setCurrentStep((prevStep) => prevStep + 1);
+  };
+
+  const handlePrev = () => {
+    setCurrentStep((prevStep) => prevStep - 1);
+  };
+
+  return (
+    <div>
+      <h1>Register Process</h1>
+      <div>
+        {currentStep === 1 && <StepOne />}
+        {currentStep === 2 && <StepTwo />}
+        {currentStep === 3 && <StepThree />}
+        {/* Add more steps as needed */}
+      </div>
+
+      <div className="flex justify-center mt-4">
+        {currentStep > 1 && (
+          <button onClick={handlePrev} className="px-4 py-2 bg-gray-300 mr-4 rounded">
+            Prev
+          </button>
+        )}
+
+        {currentStep < 3 && (
+          <button onClick={handleNext} className="px-4 py-2 bg-blue-500 text-white rounded">
+            Next
+          </button>
+        )}
+      </div>
+
+      <div className="flex justify-center mt-4">
+        {Array.from({ length: 3 }, (_, index) => (
+          <div
+            key={index}
+            className={*w-4 h-4 mx-2 rounded-full dollar*{currentStep === index + 1 ? 'bg-blue-500' : 'bg-gray-300'}*}
+          ></div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Define the components for each step (StepOne, StepTwo, StepThree, etc.)
+
+const StepOne: React.FC = () => {
+  return <div>Step One Content</div>;
+};
+
+const StepTwo: React.FC = () => {
+  return <div>Step Two Content</div>;
+};
+
+const StepThree: React.FC = () => {
+  return <div>Step Three Content</div>;
+};
+
+export default RegisterProcess;
+      `;
+
+      document.getElementById("code1").innerText = code1;
+      </script>
+
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+crossorigin="anonymous"
+></script>
+   
+  </body>
 </html>

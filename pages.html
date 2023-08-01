@@ -57,11 +57,186 @@
     </nav>
 
     <main>
-      <section>
+      <section class="my-4">
         <div class="container">
-          <h1>Login</h1>
-        <div class="card">
-            <p id="code"></p>
+          <ol>
+            <li>
+              <h2>Login/Register</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code1coll"
+                  aria-expanded="false"
+                  aria-controls="code1coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code1coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code1"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <h2>Home</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code2coll"
+                  aria-expanded="false"
+                  aria-controls="code2coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code2coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code2"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <h2>Find</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code3coll"
+                  aria-expanded="false"
+                  aria-controls="code3coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code3coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code3"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <h2>Dash</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code4coll"
+                  aria-expanded="false"
+                  aria-controls="code4coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code4coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code4"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <h2>Project</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code5coll"
+                  aria-expanded="false"
+                  aria-controls="code5coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code5coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code5"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <h2>Mess</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code6coll"
+                  aria-expanded="false"
+                  aria-controls="code6coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code6coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code6"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <h2>Incub</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code7coll"
+                  aria-expanded="false"
+                  aria-controls="code7coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code7coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code7"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <h2>Land</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code8coll"
+                  aria-expanded="false"
+                  aria-controls="code8coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code8coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code8"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
         </div>
       </section>
     </main>
@@ -72,7 +247,7 @@
     ></script>
 
     <script>
-      let code = `
+      let code1 = `
       import Link from 'next/link'
 import React from 'react'
 
@@ -181,7 +356,942 @@ const index = (props: Props) => {
 export default index
         `;
 
-        document.getElementById("code").innerText = code;
+      let code2 = `
+        import React from 'react';
+import Layout from '../../components/layout';
+import Feed from '~/components/feed';
+import InputFeed from '~/components/input-feed';
+import CardEvent from '~/components/card-event';
+import ProfileList from '~/components/profile-list';
+
+const Home: React.FC = () => {
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      console.log('Selected file:', file);
+      // You can perform further actions with the selected file here.
+    }
+  };
+
+  const handlePost = () => {
+    // Handle post logic here
+  };
+
+
+
+
+
+
+  const events = [
+    {
+      title: 'Meeting 1',
+      startTime: 'Tuesday, 20 July 2023, 09:00 AM',
+      endTime: 'Tuesday, 20 July 2023, 10:00 AM',
+    },
+    {
+      title: 'Workshop',
+      startTime: 'Wednesday, 21 July 2023, 11:00 AM',
+      endTime: 'Wednesday, 21 July 2023, 01:00 PM',
+    },
+    // Tambahkan data event lain jika diperlukan
+  ];
+
+  const handleRegister = () => {
+    // Logika ketika tombol Register di klik
+    console.log('Register clicked');
+  };
+
+  const handleSaveToCalendar = () => {
+    // Logika ketika tombol Save to Calendar di klik
+    console.log('Save to Calendar clicked');
+  };
+
+
+
+
+
+  const profiles = [
+    {
+      id: 1,
+      name: 'John Doe',
+      status: 'online',
+    },
+    {
+      id: 2,
+      name: 'Jane Smith',
+      status: 'offline',
+    },
+    // Tambahkan data profile lain jika diperlukan
+  ];
+
+  return (
+    <Layout>
+      <div className="container-fluid bg-red-500 h-[200vh] mt-20 px-6 py-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="col-span-2 bg-gray-200 p-4">
+            <h1>Welcome to Home Page</h1>
+            <InputFeed
+              username="Username User"
+              isPublic={true} // Set true for public or false for private
+              handleFileChange={handleFileChange}
+              handlePost={handlePost}
+            />
+
+            <section className="my-6 p-6 bg-white rounded-md shadow-md text-gray-700">
+              <h1>Username User</h1>
+              <p>Public atau Private</p>
+              <form>
+                <div className="grid grid-cols-1">
+                  <div>
+                    <label className="text-gray-700" htmlFor="username">
+                      What's on Your Mind?
+                    </label>
+                    <input
+                      id="username"
+                      type="text"
+                      className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+                    />
+                  </div>
+                </div>
+                <div className="flex justify-between mt-6">
+                  <input type="file" onChange={handleFileChange} />
+                  <button className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
+                    Post
+                  </button>
+                </div>
+              </form>
+            </section>
+            <Feed
+              name="John Doe"
+              role="Frontend Developer"
+              profileImage="https://example.com/profile-image.jpg" // Ganti URL gambar profil dengan URL gambar Anda
+              postContent="Hello, this is my first post!" // Isi postingan
+              likes={10} // Jumlah like
+              comments={5} // Jumlah komentar
+            />
+            <Feed
+              name="Jane Smith"
+              role="Backend Developer"
+              profileImage="https://example.com/profile-image.jpg" // Ganti URL gambar profil dengan URL gambar Anda
+              postContent="Excited to collaborate with other developers!" // Isi postingan
+              likes={20} // Jumlah like
+              comments={8} // Jumlah komentar
+              investmentProgress={10}
+              investmentTotal={75}
+            />
+          </div>
+
+
+          <div className="col-span-1 bg-gray-300 p-4">
+            Konten Bagian 1/3
+            {events.map((event, index) => (
+              <CardEvent
+                key={index}
+                title={event.title}
+                startTime={event.startTime}
+                endTime={event.endTime}
+                onRegisterClick={handleRegister}
+                onSaveToCalendarClick={handleSaveToCalendar}
+              />
+            ))}
+
+            <ProfileList profiles={profiles} />
+          </div>
+        </div>
+
+
+
+
+        <div className="grid grid-cols-1 md:grid-cols-2">
+
+          <div>
+            BUAT EVENTS
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default Home;
+        `;
+
+      let code3 = `
+        import React, { useState } from 'react';
+import Layout from '../../components/layout';
+import UserCard from '~/components/user-card'
+
+interface Collaborator {
+  id: number;
+  name: string;
+  role: string;
+}
+
+const collaboratorsData: Collaborator[] = [
+  { id: 1, name: 'John Doe', role: 'Designer' },
+  { id: 2, name: 'Jane Smith', role: 'Developer' },
+  { id: 3, name: 'Michael Johnson', role: 'Designer' },
+  { id: 4, name: 'Emily Brown', role: 'Developer' },
+  // Add more collaborators as needed
+];
+
+interface UserProfile {
+  id: number;
+  photo: string;
+  name: string;
+  role: string;
+  specialization: string;
+  isOnline: boolean;
+}
+
+const dummyUsers: UserProfile[] = [
+  {
+    id: 1,
+    photo: 'https://example.com/profile-photo-1.jpg',
+    name: 'John Doe',
+    role: 'Designer',
+    specialization: 'Graphic Design',
+    isOnline: true,
+  },
+  {
+    id: 2,
+    photo: 'https://example.com/profile-photo-2.jpg',
+    name: 'Jane Smith',
+    role: 'Developer',
+    specialization: 'Web Development',
+    isOnline: false,
+  },
+  // Add more dummy users as needed
+];
+
+const FindCollaborator: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedRole, setSelectedRole] = useState('');
+
+  const handleSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleRoleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedRole(event.target.value);
+  };
+
+  const filteredUsers = dummyUsers.filter((user) => {
+    const nameMatch = user.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const roleMatch = selectedRole === '' || user.role === selectedRole;
+    return nameMatch && roleMatch;
+  });
+
+  const handleMessageClick = (userId: number) => {
+    // Handle message button click for user with given userId
+  };
+
+  const handleCollabClick = (userId: number) => {
+    // Handle collab button click for user with given userId
+  };
+
+
+  return (
+    <Layout>
+      <div className="container-fluid bg-red-500 h-[200vh] mt-20 px-6 py-4">
+        <h1>Find Collaborator</h1>
+        <div>
+          <input
+            type="text"
+            placeholder="Search by name"
+            value={searchTerm}
+            onChange={handleSearchInputChange}
+          />
+          <select value={selectedRole} onChange={handleRoleSelectChange}>
+            <option value="">All Roles</option>
+            <option value="Designer">Designer</option>
+            <option value="Developer">Developer</option>
+            {/* Add more roles as needed */}
+          </select>
+        </div>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {filteredUsers.map((user) => (
+            <UserCard
+              key={user.id}
+              photo={user.photo}
+              name={user.name}
+              role={user.role}
+              specialization={user.specialization}
+              onMessageClick={() => handleMessageClick(user.id)}
+              onCollabClick={() => handleCollabClick(user.id)}
+              isOnline={user.isOnline}
+            />
+          ))}
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default FindCollaborator;
+        `;
+
+
+        let code4 = `
+        import React from 'react';
+import Layout from '../../components/layout';
+
+const Home: React.FC = () => {
+  return (
+    <Layout>
+      <div className="container-fluid bg-red-500 h-[200vh] mt-20 px-6 py-4">
+        <h1>Welcome to Dashboard Page</h1>
+      </div>
+    </Layout>
+  );
+};
+
+export default Home;
+        `;
+
+
+        let code5 = `
+        // pages/campaign-crowdfunding.tsx
+import React, { useState } from 'react';
+import Layout from '~/components/layout';
+
+interface Campaign {
+  id: number;
+  title: string;
+  targetAmount?: number; // Optional for collab type, required for investasi type
+  description: string;
+  imageUrl: string;
+  type: 'collab' | 'investasi'; // Type classification: collab or investasi
+  // Add other relevant information about the campaign
+}
+
+const campaignData: Campaign[] = [
+  {
+    id: 1,
+    title: 'Collab: Help Build a School in Rural Area',
+    description: 'Looking for entrepreneurs to collaborate on building a school in a remote area.',
+    imageUrl: 'https://example.com/collab-campaign1.jpg',
+    type: 'collab',
+  },
+  {
+    id: 2,
+    title: 'Investasi: Fund Clean Water Project',
+    targetAmount: 3000,
+    description: 'Looking for investors to fund a clean water project in communities in need.',
+    imageUrl: 'https://example.com/investasi-campaign1.jpg',
+    type: 'investasi',
+  },
+  // Add more campaign data as needed
+];
+
+const CampaignCrowdfunding: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedType, setSelectedType] = useState<'collab' | 'investasi'>('');
+
+  const handleSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleTypeSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedType(event.target.value as 'collab' | 'investasi');
+  };
+
+  const filteredCampaigns = campaignData.filter((campaign) => {
+    const nameMatch = campaign.title.toLowerCase().includes(searchTerm.toLowerCase());
+    const typeMatch = selectedType === '' || campaign.type === selectedType;
+    return nameMatch && typeMatch;
+  });
+
+  return (
+    <Layout>
+      <div className='mt-20'>
+        <h1>Campaign Crowdfunding</h1>
+        <p>Explore and support crowdfunding campaigns here. Get involved in exciting projects and ideas!</p>
+        <div>
+          <input
+            type="text"
+            placeholder="Search by campaign name"
+            value={searchTerm}
+            onChange={handleSearchInputChange}
+          />
+          <select value={selectedType} onChange={handleTypeSelectChange}>
+            <option value="">All Types</option>
+            <option value="collab">Collab</option>
+            <option value="investasi">Investasi</option>
+          </select>
+        </div>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {filteredCampaigns.map((campaign) => (
+            <div key={campaign.id} className="bg-white p-4 rounded-md shadow-md">
+              <img src={campaign.imageUrl} alt={campaign.title} className="w-full h-40 object-cover rounded-md" />
+              <h2 className="mt-4 text-xl font-semibold">{campaign.title}</h2>
+              {campaign.type === 'investasi' && (
+                <p className="mt-2">Target Amount: $*{campaign.targetAmount}</p>
+              )}
+              <p className="mt-2">{campaign.description}</p>
+              {/* Add other campaign information and support functionality here */}
+            </div>
+          ))}
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default CampaignCrowdfunding;
+        `;
+
+        let code6 = `
+        // pages/messages.tsx
+import React, { useState } from 'react';
+import Layout from '~/components/layout';
+
+interface Message {
+  id: number;
+  sender: string;
+  receiver: string;
+  content: string;
+  timestamp: string;
+  // Add other relevant information about the message
+}
+
+const messageData: Message[] = [
+  {
+    id: 1,
+    sender: 'John Doe',
+    receiver: 'Jane Smith',
+    content: 'Hi Jane, I saw your crowdfunding campaign. Let\'s collaborate!',
+    timestamp: '2023-07-25 10:30',
+  },
+  {
+    id: 2,
+    sender: 'Jane Smith',
+    receiver: 'John Doe',
+    content: 'Sure, John! Let\'s discuss further details.',
+    timestamp: '2023-07-25 11:15',
+  },
+  // Add more message data as needed
+];
+
+const Messages: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredMessages = messageData.filter((message) => {
+    const senderMatch = message.sender.toLowerCase().includes(searchTerm.toLowerCase());
+    const receiverMatch = message.receiver.toLowerCase().includes(searchTerm.toLowerCase());
+    return senderMatch || receiverMatch;
+  });
+
+  return (
+    <Layout>
+      <div className='px-6 py-4 mt-20'>
+        <h1>Messages</h1>
+        <p>Communicate with collaborators, investors, and campaigners here.</p>
+        <div>
+          <input
+            type="text"
+            placeholder="Search by sender or receiver"
+            value={searchTerm}
+            onChange={handleSearchInputChange}
+          />
+        </div>
+        <div>
+          {filteredMessages.map((message) => (
+            <div key={message.id} className="bg-white p-4 rounded-md shadow-md">
+              <p className="text-gray-600">From: {message.sender}</p>
+              <p className="text-gray-600">To: {message.receiver}</p>
+              <p>{message.content}</p>
+              <p className="text-gray-400 text-sm">{message.timestamp}</p>
+              {/* Add other message information and functionality here */}
+            </div>
+          ))}
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default Messages;
+        `;
+
+
+        let code7 = `
+        // pages/incubation-schedule.tsx
+import React, { useState } from 'react';
+import Layout from '~/components/layout';
+
+interface Meeting {
+  id: number;
+  day: string;
+  date: string;
+  month: string;
+  year: string;
+  presenter: string;
+  participants: number;
+  zoomLink: string;
+}
+
+const incubationMeetings: Meeting[] = [
+  {
+    id: 1,
+    day: 'Monday',
+    date: '01',
+    month: 'November',
+    year: '2023',
+    presenter: 'John Doe',
+    participants: 10,
+    zoomLink: 'https://example.com/zoom-link-1',
+  },
+  {
+    id: 2,
+    day: 'Tuesday',
+    date: '02',
+    month: 'November',
+    year: '2023',
+    presenter: 'Jane Smith',
+    participants: 15,
+    zoomLink: 'https://example.com/zoom-link-2',
+  },
+  {
+    id: 3,
+    day: 'Wednesday',
+    date: '03',
+    month: 'November',
+    year: '2023',
+    presenter: 'Michael Johnson',
+    participants: 8,
+    zoomLink: 'https://example.com/zoom-link-3',
+  },
+  {
+    id: 4,
+    day: 'Thursday',
+    date: '04',
+    month: 'November',
+    year: '2023',
+    presenter: 'Emily Brown',
+    participants: 12,
+    zoomLink: 'https://example.com/zoom-link-4',
+  },
+  {
+    id: 5,
+    day: 'Friday',
+    date: '05',
+    month: 'November',
+    year: '2023',
+    presenter: 'David Lee',
+    participants: 20,
+    zoomLink: 'https://example.com/zoom-link-5',
+  },
+  // Add more data as needed
+  {
+    id: 6,
+    day: 'Monday',
+    date: '08',
+    month: 'November',
+    year: '2023',
+    presenter: 'Sarah Adams',
+    participants: 18,
+    zoomLink: 'https://example.com/zoom-link-6',
+  },
+  {
+    id: 7,
+    day: 'Tuesday',
+    date: '09',
+    month: 'November',
+    year: '2023',
+    presenter: 'Alex Turner',
+    participants: 14,
+    zoomLink: 'https://example.com/zoom-link-7',
+  },
+  {
+    id: 8,
+    day: 'Wednesday',
+    date: '10',
+    month: 'November',
+    year: '2023',
+    presenter: 'Sophia White',
+    participants: 9,
+    zoomLink: 'https://example.com/zoom-link-8',
+  },
+  {
+    id: 9,
+    day: 'Thursday',
+    date: '11',
+    month: 'November',
+    year: '2023',
+    presenter: 'William Johnson',
+    participants: 22,
+    zoomLink: 'https://example.com/zoom-link-9',
+  },
+  {
+    id: 10,
+    day: 'Friday',
+    date: '12',
+    month: 'November',
+    year: '2023',
+    presenter: 'Olivia Miller',
+    participants: 17,
+    zoomLink: 'https://example.com/zoom-link-10',
+  },
+  {
+    id: 11,
+    day: 'Monday',
+    date: '15',
+    month: 'November',
+    year: '2023',
+    presenter: 'Aiden Turner',
+    participants: 11,
+    zoomLink: 'https://example.com/zoom-link-11',
+  },
+  {
+    id: 12,
+    day: 'Tuesday',
+    date: '16',
+    month: 'November',
+    year: '2023',
+    presenter: 'Ava Thompson',
+    participants: 13,
+    zoomLink: 'https://example.com/zoom-link-12',
+  },
+  {
+    id: 13,
+    day: 'Wednesday',
+    date: '17',
+    month: 'November',
+    year: '2023',
+    presenter: 'Noah Johnson',
+    participants: 19,
+    zoomLink: 'https://example.com/zoom-link-13',
+  },
+  {
+    id: 14,
+    day: 'Thursday',
+    date: '18',
+    month: 'November',
+    year: '2023',
+    presenter: 'Emma Davis',
+    participants: 16,
+    zoomLink: 'https://example.com/zoom-link-14',
+  },
+  {
+    id: 15,
+    day: 'Friday',
+    date: '19',
+    month: 'November',
+    year: '2023',
+    presenter: 'Liam Wilson',
+    participants: 21,
+    zoomLink: 'https://example.com/zoom-link-15',
+  },
+];
+
+
+const PAGE_SIZE_OPTIONS = [10, 25, 50, 100];
+
+const IncubationSchedule: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [pageSize, setPageSize] = useState(10);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const handleSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handlePageSizeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setPageSize(Number(event.target.value));
+    setCurrentPage(1);
+  };
+
+  const filteredMeetings = incubationMeetings.filter((meeting) => {
+    return (
+      meeting.day.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      meeting.date.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      meeting.month.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      meeting.year.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      meeting.presenter.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      meeting.zoomLink.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  });
+
+  const sortedMeetings = filteredMeetings.sort((a, b) => {
+    // Implement sorting based on your preference
+    // For example, sorting by date
+    return new Date(*$*{a.year}-$*{a.month}-$*{a.date}*) - new Date(*$*{b.year}-$*{b.month}-$*{b.date}*);
+  });
+
+  const totalMeetings = sortedMeetings.length;
+  const totalPages = Math.ceil(totalMeetings / pageSize);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
+  };
+
+  const displayedMeetings = sortedMeetings.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+
+  return (
+    <Layout>
+      <div>
+        <h1>Incubation Schedule</h1>
+        <p>Check the weekly schedule for incubation meetings.</p>
+        <div className="bg-white p-4 rounded-md shadow-md">
+          <h2>Weekly Incubation Meetings</h2>
+          <input
+            type="text"
+            placeholder="Search by day, date, month, year, presenter, or Zoom link"
+            value={searchTerm}
+            onChange={handleSearchInputChange}
+            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+          />
+          <div className="mt-2">
+            <label htmlFor="pageSizeSelect" className="text-gray-700">
+              Show
+            </label>
+            <select
+              id="pageSizeSelect"
+              value={pageSize}
+              onChange={handlePageSizeChange}
+              className="block px-4 py-2 mt-1 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+            >
+              {PAGE_SIZE_OPTIONS.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+            <span className="text-gray-700">entries</span>
+          </div>
+          <table className="mt-4 w-full">
+            {/* Table header */}
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Date</th>
+                <th>Month</th>
+                <th>Year</th>
+                <th>Presenter</th>
+                <th>Participants</th>
+                <th>Zoom Link</th>
+              </tr>
+            </thead>
+            {/* Table body */}
+            <tbody>
+              {displayedMeetings.map((meeting) => (
+                <tr key={meeting.id}>
+                  <td>{meeting.day}</td>
+                  <td>{meeting.date}</td>
+                  <td>{meeting.month}</td>
+                  <td>{meeting.year}</td>
+                  <td>{meeting.presenter}</td>
+                  <td>{meeting.participants}</td>
+                  <td>
+                    <a href={meeting.zoomLink} target="_blank" rel="noopener noreferrer">
+                      Join Meeting
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div className="mt-4 flex items-center justify-between">
+            <span>
+              Showing {Math.min((currentPage - 1) * pageSize + 1, totalMeetings)} to{' '}
+              {Math.min(currentPage * pageSize, totalMeetings)} of {totalMeetings} entries
+            </span>
+            <div>
+              <button
+                onClick={handlePrevPage}
+                disabled={currentPage === 1}
+                className={*px-3 py-2 rounded-md $*{currentPage === 1 ? 'bg-gray-300 text-gray-600' : 'bg-gray-600 text-white'}*}
+              >
+                Prev
+              </button>
+              <button
+                onClick={handleNextPage}
+                disabled={currentPage === totalPages}
+                className={*px-3 py-2 rounded-md $*{currentPage === totalPages ? 'bg-gray-300 text-gray-600' : 'bg-gray-600 text-white'}*}
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default IncubationSchedule;
+        `;
+
+
+        let code9 = `
+        import React from 'react';
+
+interface UserProfile {
+  name: string;
+  address: string;
+  postCode: string;
+  rating: number;
+}
+
+const dummyUser: UserProfile = {
+  name: 'John Doe',
+  address: '123 Main Street',
+  postCode: '12345',
+  rating: 4.5,
+};
+
+const ProfilPage: React.FC = () => {
+  return (
+    <div className="container mx-auto mt-10">
+      <h1 className="text-2xl font-semibold mb-4">User Profile</h1>
+      <div className="bg-white shadow-md p-4 rounded-lg">
+        <div className="mb-4">
+          <h2 className="text-xl font-semibold">Name:</h2>
+          <p>{dummyUser.name}</p>
+        </div>
+        <div className="mb-4">
+          <h2 className="text-xl font-semibold">Address:</h2>
+          <p>{dummyUser.address}</p>
+        </div>
+        <div className="mb-4">
+          <h2 className="text-xl font-semibold">Post Code:</h2>
+          <p>{dummyUser.postCode}</p>
+        </div>
+        <div className="mb-4">
+          <h2 className="text-xl font-semibold">Rating:</h2>
+          <p>{dummyUser.rating}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProfilPage;
+
+        `;
+
+        let code10 = `
+        import React, { useState } from 'react';
+import { Card, Input } from 'shadcn';
+
+interface UserProfile {
+  name: string;
+  address: string;
+  postCode: string;
+  rating: number;
+}
+
+const dummyUser: UserProfile = {
+  name: 'John Doe',
+  address: '123 Main Street',
+  postCode: '12345',
+  rating: 4.5,
+};
+
+const ProfilPage: React.FC = () => {
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedUser, setEditedUser] = useState<UserProfile>(dummyUser);
+
+  const handleEditClick = () => {
+    setIsEditing(true);
+  };
+
+  const handleSaveClick = () => {
+    setIsEditing(false);
+    // TODO: Lakukan penyimpanan data yang sudah diubah (misalnya, kirim ke server)
+    console.log('User data saved:', editedUser);
+  };
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setEditedUser((prevUser) => ({ ...prevUser, [name]: value }));
+  };
+
+  return (
+    <div className="container mx-auto mt-10">
+      <h1 className="text-2xl font-semibold mb-4">User Profile</h1>
+      <Card className="bg-white shadow-md p-4 rounded-lg">
+        <div className="mb-4">
+          <h2 className="text-xl font-semibold">Name:</h2>
+          {isEditing ? (
+            <Input name="name" value={editedUser.name} onChange={handleInputChange} />
+          ) : (
+            <Input value={editedUser.name} readOnly />
+          )}
+        </div>
+        <div className="mb-4">
+          <h2 className="text-xl font-semibold">Address:</h2>
+          {isEditing ? (
+            <Input name="address" value={editedUser.address} onChange={handleInputChange} />
+          ) : (
+            <Input value={editedUser.address} readOnly />
+          )}
+        </div>
+        <div className="mb-4">
+          <h2 className="text-xl font-semibold">Post Code:</h2>
+          {isEditing ? (
+            <Input name="postCode" value={editedUser.postCode} onChange={handleInputChange} />
+          ) : (
+            <Input value={editedUser.postCode} readOnly />
+          )}
+        </div>
+        <div className="mb-4">
+          <h2 className="text-xl font-semibold">Rating:</h2>
+          {isEditing ? (
+            <Input name="rating" value={editedUser.rating.toString()} onChange={handleInputChange} />
+          ) : (
+            <Input value={editedUser.rating.toString()} readOnly />
+          )}
+        </div>
+        <div className="mt-4">
+          {isEditing ? (
+            <button
+              onClick={handleSaveClick}
+              className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            >
+              Save
+            </button>
+          ) : (
+            <button
+              onClick={handleEditClick}
+              className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+            >
+              Edit
+            </button>
+          )}
+        </div>
+      </Card>
+    </div>
+  );
+};
+
+export default ProfilPage;
+
+        `
+
+      document.getElementById("code1").innerText = code1;
+      document.getElementById("code2").innerText = code2;
+      document.getElementById("code3").innerText = code3;
+      document.getElementById("code4").innerText = code4;
+      document.getElementById("code5").innerText = code5;
+      document.getElementById("code6").innerText = code6;
+      document.getElementById("code7").innerText = code7;
+      document.getElementById("code8").innerText = code8;
+      document.getElementById("code9").innerText = code9;
+      document.getElementById("code10").innerText = code10;
     </script>
   </body>
 </html>

@@ -1,40 +1,1398 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meraki UI Template</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="component.html">Component</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="layout.html">Layout</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages.html">Pages</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="component.html"
+                >Component</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="layout.html">Layout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages.html">Pages</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <section class="my-4">
+      <div class="container">
+        <ol>
+          <li>
+            <h2>Card Even</h2>
+            <p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#code1coll"
+                aria-expanded="false"
+                aria-controls="code1coll"
+              >
+                Show Code
+              </button>
+            </p>
+            <div style="min-height: 120px">
+              <div class="collapse collapse-horizontal" id="code1coll">
+                <div class="card card-body w-full bg-dark text-white">
+                  <span id="code1"></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <h2>Feed</h2>
+            <p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#code2coll"
+                aria-expanded="false"
+                aria-controls="code2coll"
+              >
+                Show Code
+              </button>
+            </p>
+            <div style="min-height: 120px">
+              <div class="collapse collapse-horizontal" id="code2coll">
+                <div class="card card-body w-full bg-dark text-white">
+                  <span id="code2"></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <h2>Input Feed</h2>
+            <p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#code3coll"
+                aria-expanded="false"
+                aria-controls="code3coll"
+              >
+                Show Code
+              </button>
+            </p>
+            <div style="min-height: 120px">
+              <div class="collapse collapse-horizontal" id="code3coll">
+                <div class="card card-body w-full bg-dark text-white">
+                  <span id="code3"></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <h2>Layout</h2>
+            <p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#code4coll"
+                aria-expanded="false"
+                aria-controls="code4coll"
+              >
+                Show Code
+              </button>
+            </p>
+            <div style="min-height: 120px">
+              <div class="collapse collapse-horizontal" id="code4coll">
+                <div class="card card-body w-full bg-dark text-white">
+                  <span id="code4"></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <h2>Modal</h2>
+            <p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#code5coll"
+                aria-expanded="false"
+                aria-controls="code5coll"
+              >
+                Show Code
+              </button>
+            </p>
+            <div style="min-height: 120px">
+              <div class="collapse collapse-horizontal" id="code5coll">
+                <div class="card card-body w-full bg-dark text-white">
+                  <span id="code5"></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <h2>Navbar</h2>
+            <p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#code6coll"
+                aria-expanded="false"
+                aria-controls="code6coll"
+              >
+                Show Code
+              </button>
+            </p>
+            <div style="min-height: 120px">
+              <div class="collapse collapse-horizontal" id="code6coll">
+                <div class="card card-body w-full bg-dark text-white">
+                  <span id="code6"></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <h2>Profile List</h2>
+            <p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#code7coll"
+                aria-expanded="false"
+                aria-controls="code7coll"
+              >
+                Show Code
+              </button>
+            </p>
+            <div style="min-height: 120px">
+              <div class="collapse collapse-horizontal" id="code7coll">
+                <div class="card card-body w-full bg-dark text-white">
+                  <span id="code7"></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <h2>Sidebar</h2>
+            <p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#code8coll"
+                aria-expanded="false"
+                aria-controls="code8coll"
+              >
+                Show Code
+              </button>
+            </p>
+            <div style="min-height: 120px">
+              <div class="collapse collapse-horizontal" id="code8coll">
+                <div class="card card-body w-full bg-dark text-white">
+                  <span id="code8"></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <h2>User Card</h2>
+            <p>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#code9coll"
+                aria-expanded="false"
+                aria-controls="code9coll"
+              >
+                Show Code
+              </button>
+            </p>
+            <div style="min-height: 120px">
+              <div class="collapse collapse-horizontal" id="code9coll">
+                <div class="card card-body w-full bg-dark text-white">
+                  <span id="code89"></span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      let code1 = `
+        import React from 'react';
+
+interface CardEventProps {
+  title: string;
+  startTime: string;
+  endTime: string;
+  onRegisterClick: () => void;
+  onSaveToCalendarClick: () => void;
+}
+
+const CardEvent: React.FC<CardEventProps> = ({ title, startTime, endTime, onRegisterClick, onSaveToCalendarClick }) => {
+  return (
+    <div className="bg-white p-4 rounded-lg shadow-md">
+      <h2 className="text-xl font-semibold mb-2">{title}</h2>
+      <p>
+        <span className="font-semibold">Start Time:</span> {startTime}
+      </p>
+      <p>
+        <span className="font-semibold">End Time:</span> {endTime}
+      </p>
+      <div className="flex justify-between mt-4">
+        <button
+          className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+          onClick={onRegisterClick}
+        >
+          Register
+        </button>
+        <button
+          className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600"
+          onClick={onSaveToCalendarClick}
+        >
+          Save to Calendar
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default CardEvent;
+        `;
+
+      let code2 = `
+        // import React from 'react';
+
+// interface FeedProps {
+//   name: string;
+//   role: string;
+//   profileImage: string;
+//   postContent: string;
+//   likes: number;
+//   comments: number;
+//   investmentProgress?: number; // Properti opsional untuk progress bar investasi
+//   investmentTotal?: number; // Properti opsional untuk jumlah investasi yang sudah terwujud
+// }
+
+// const Feed: React.FC<FeedProps> = ({
+//   name,
+//   role,
+//   profileImage,
+//   postContent,
+//   likes,
+//   comments,
+//   investmentProgress,
+//   investmentTotal,
+// }) => {
+//   return (
+//     <div className="border p-4 mb-4">
+//       <div className="flex items-center">
+//         <img src={profileImage} alt="Profile" className="w-10 h-10 rounded-full mr-3" />
+//         <div>
+//           <h2 className="font-semibold text-lg">{name}</h2>
+//           <p className="text-gray-600">{role}</p>
+//         </div>
+//       </div>
+
+//       <div className="mt-3">{postContent}</div>
+
+//       {/* Likes and Comments */}
+//       <div className="flex mt-3 text-gray-600">
+//         <div className="flex items-center mr-4">
+//           <svg
+//             className="w-5 h-5 mr-1 text-blue-500"
+//             fill="none"
+//             strokeLinecap="round"
+//             strokeLinejoin="round"
+//             strokeWidth="2"
+//             viewBox="0 0 24 24"
+//             stroke="currentColor"
+//           >
+//             <path d="M12 6V4M12 4C7 4 2 7.58172 2 12C2 16.4183 7 20 12 20C17 20 22 16.4183 22 12C22 7.58172 17 4 12 4Z"></path>
+//           </svg>
+//           {likes} Likes
+//         </div>
+//         <div className="flex items-center">
+//           <svg
+//             className="w-5 h-5 mr-1 text-green-500"
+//             fill="none"
+//             strokeLinecap="round"
+//             strokeLinejoin="round"
+//             strokeWidth="2"
+//             viewBox="0 0 24 24"
+//             stroke="currentColor"
+//           >
+//             <path d="M5 13l4 4L19 7"></path>
+//           </svg>
+//           {comments} Comments
+//         </div>
+//       </div>
+
+//       {/* Investment Progress */}
+//       {typeof investmentProgress !== 'undefined' && (
+//         <div className="mt-3">
+//           <div className="text-sm font-medium text-gray-600">Investment Progress</div>
+//           <div className="bg-gray-300 h-3 mt-1 rounded">
+//             <div
+//               className="bg-blue-500 h-3 rounded"
+//               style={{ width: *$*{investmentProgress}%*}}
+//             ></div>
+//           </div>
+//         </div>
+//       )}
+
+//       {/* Investment Total */}
+//       {typeof investmentTotal !== 'undefined' && (
+//         <div className="mt-3">
+//           <div className="text-sm font-medium text-gray-600">Investment Total</div>
+//           <div className="text-lg font-semibold">{investmentTotal}</div>
+//         </div>
+//       )}
+
+//       {/* Collaborate Button */}
+//       <button className="mt-3 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+//         Collaborate
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default Feed;
+// import React, { useState } from 'react';
+
+// interface FeedProps {
+//   name: string;
+//   role: string;
+//   profileImage: string;
+//   postContent: string;
+//   likes: number;
+//   comments: number;
+//   investmentProgress?: number; // Properti opsional untuk progress bar investasi
+//   investmentTotal?: number; // Properti opsional untuk jumlah investasi yang sudah terwujud
+// }
+
+// const Feed: React.FC<FeedProps> = ({ ... }) => {
+//   // state dan event handler sesuai dengan kebutuhan
+//   const [showComment, setShowComment] = useState(false);
+//   const [likeActive, setLikeActive] = useState(false);
+//   const [commentText, setCommentText] = useState('');
+
+//   const handleLikeClick = () => {
+//     setLikeActive(!likeActive);
+//     console.log(*Post liked! New like status: $*{!likeActive}*);
+//   };
+
+//   const handleCommentClick = () => {
+//     setShowComment(!showComment);
+//     console.log(*Comment section opened! New comment status: $*{showComment}*);
+//   };
+
+//   const handleCollabClick = () => {
+//     console.log(*Collaborate button clicked for post by $*{name}*);
+//   };
+
+//   const handleInvestClick = () => {
+//     console.log(*Invest button clicked for post by $*{name}*);
+//   };
+
+//   const handleCommentSubmit = () => {
+//     console.log(*Comment submitted: $*{commentText}*);
+//     setCommentText(''); // Reset comment text after submitting
+//   };
+
+//   return (
+//     <div className="border p-4 mb-4">
+//       {/* Konten feed sesuai dengan kebutuhan */}
+      
+//       {/* Likes and Comments */}
+//       <div className="flex mt-3 text-gray-600">
+//         <div className="flex items-center mr-4">
+//           {/* Konten tombol Like dan Likes */}
+//           <svg
+//             onClick={handleLikeClick}
+//             className={*w-5 h-5 mr-1 $*{likeActive ? 'text-red-500' : 'text-blue-500'}*}
+//             fill="none"
+//             strokeLinecap="round"
+//             strokeLinejoin="round"
+//             strokeWidth="2"
+//             viewBox="0 0 24 24"
+//             stroke="currentColor"
+//           >
+//             <path d="M12 6V4M12 4C7 4 2 7.58172 2 12C2 16.4183 7 20 12 20C17 20 22 16.4183 22 12C22 7.58172 17 4 12 4Z"></path>
+//           </svg>
+//           {likes} Likes
+//         </div>
+//         <div className="flex items-center">
+//           {/* Tombol Comments diubah menjadi text area ketika diklik */}
+//           {showComment ? (
+//             <div>
+//               <textarea
+//                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+//                 placeholder="Type your comment here..."
+//                 value={commentText}
+//                 onChange={(e) => setCommentText(e.target.value)}
+//               ></textarea>
+//               <button
+//                 onClick={handleCommentSubmit}
+//                 className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+//               >
+//                 Comment
+//               </button>
+//             </div>
+//           ) : (
+//             <button onClick={handleCommentClick} className="flex items-center">
+//               <svg
+//                 className="w-5 h-5 mr-1 text-green-500 cursor-pointer"
+//                 fill="none"
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//                 strokeWidth="2"
+//                 viewBox="0 0 24 24"
+//                 stroke="currentColor"
+//               >
+//                 <path d="M5 13l4 4L19 7"></path>
+//               </svg>
+//               {comments} Comments
+//             </button>
+//           )}
+//         </div>
+//       </div>
+
+//       {/* Investment Progress */}
+//       {typeof investmentProgress !== 'undefined' && (
+//         <div className="mt-3">
+//           {/* Konten investment progress */}
+//         </div>
+//       )}
+
+//       {/* Investment Total */}
+//       {typeof investmentTotal !== 'undefined' && (
+//         <div className="mt-3">
+//           {/* Konten investment total */}
+//         </div>
+//       )}
+
+//       {/* Collaborate Button */}
+//       <button onClick={handleCollabClick} className="mt-3 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+//         Collaborate
+//       </button>
+
+//       {/* Invest Button */}
+//       <button onClick={handleInvestClick} className="mt-3 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
+//         Invest
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default Feed;
+
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react';
+
+// interface FeedProps {
+//   name: string;
+//   role: string;
+//   profileImage: string;
+//   postContent: string;
+//   likes: number;
+//   comments: number;
+//   investmentProgress?: number; // Properti opsional untuk progress bar investasi
+//   investmentTotal?: number; // Properti opsional untuk jumlah investasi yang sudah terwujud
+// }
+
+// const Feed: React.FC<FeedProps> = ({
+//   name,
+//   role,
+//   profileImage,
+//   postContent,
+//   likes,
+//   comments,
+//   investmentProgress,
+//   investmentTotal,
+// }) => {
+//   const [showComment, setShowComment] = useState(false);
+//   const [likeActive, setLikeActive] = useState(false);
+//   const [commentText, setCommentText] = useState('');
+
+//   const handleLikeClick = () => {
+//     setLikeActive(!likeActive);
+//     console.log(*Post liked! New like status: $*{!likeActive}*);
+//   };
+
+//   const handleCommentClick = () => {
+//     setShowComment(!showComment);
+//     console.log(*Comment section opened! New comment status: $*{showComment}*);
+//   };
+
+//   const handleCollabClick = () => {
+//     console.log(*Collaborate button clicked for post by $*{name}*);
+//   };
+
+//   const handleInvestClick = () => {
+//     console.log(*Invest button clicked for post by $*{name}*);
+//   };
+
+//   const handleCommentSubmit = () => {
+//     console.log(*Comment submitted: $*{commentText}*);
+//     setCommentText(''); // Reset comment text after submitting
+//   };
+
+//   return (
+//     <div className="border p-4 mb-4">
+//       {/* Konten feed sesuai dengan kebutuhan */}
+      
+//       {/* Likes and Comments */}
+//       <div className="flex mt-3 text-gray-600">
+//         <div className="flex items-center mr-4">
+//           {/* Konten tombol Like dan Likes */}
+//           <svg
+//             onClick={handleLikeClick}
+//             className={*w-5 h-5 mr-1 $*{likeActive ? 'text-red-500' : 'text-blue-500'}*}
+//             fill="none"
+//             strokeLinecap="round"
+//             strokeLinejoin="round"
+//             strokeWidth="2"
+//             viewBox="0 0 24 24"
+//             stroke="currentColor"
+//           >
+//             <path d="M12 6V4M12 4C7 4 2 7.58172 2 12C2 16.4183 7 20 12 20C17 20 22 16.4183 22 12C22 7.58172 17 4 12 4Z"></path>
+//           </svg>
+//           {likes} Likes
+//         </div>
+//         <div className="flex items-center">
+//           {/* Tombol Comments diubah menjadi text area ketika diklik */}
+//           {showComment ? (
+//             <div>
+//               <textarea
+//                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+//                 placeholder="Type your comment here..."
+//                 value={commentText}
+//                 onChange={(e) => setCommentText(e.target.value)}
+//               ></textarea>
+//               <button
+//                 onClick={handleCommentSubmit}
+//                 className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+//               >
+//                 Comment
+//               </button>
+//             </div>
+//           ) : (
+//             <button onClick={handleCommentClick} className="flex items-center">
+//               <svg
+//                 className="w-5 h-5 mr-1 text-green-500 cursor-pointer"
+//                 fill="none"
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//                 strokeWidth="2"
+//                 viewBox="0 0 24 24"
+//                 stroke="currentColor"
+//               >
+//                 <path d="M5 13l4 4L19 7"></path>
+//               </svg>
+//               {comments} Comments
+//             </button>
+//           )}
+//         </div>
+//       </div>
+
+//       {/* Investment Progress */}
+//       {typeof investmentProgress !== 'undefined' && (
+//         <div className="mt-3">
+//           {/* Konten investment progress */}
+//         </div>
+//       )}
+
+//       {/* Investment Total */}
+//       {typeof investmentTotal !== 'undefined' && (
+//         <div className="mt-3">
+//           {/* Konten investment total */}
+//         </div>
+//       )}
+
+//       {/* Collaborate Button */}
+//       <button onClick={handleCollabClick} className="mt-3 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+//         Collaborate
+//       </button>
+
+//       {/* Invest Button */}
+//       <button onClick={handleInvestClick} className="mt-3 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
+//         Invest
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default Feed;
+
+
+import React, { useState } from 'react';
+
+interface FeedProps {
+  name: string;
+  role: string;
+  profileImage: string;
+  postContent: string;
+  likes: number;
+  comments: number;
+  investmentProgress?: number; // Properti opsional untuk progress bar investasi
+  investmentTotal?: number; // Properti opsional untuk jumlah investasi yang sudah terwujud
+}
+
+const Feed: React.FC<FeedProps> = ({
+  name,
+  role,
+  profileImage,
+  postContent,
+  likes,
+  comments,
+  investmentProgress,
+  investmentTotal,
+}) => {
+  const [showComment, setShowComment] = useState(false);
+  const [likeActive, setLikeActive] = useState(false);
+  const [commentText, setCommentText] = useState('');
+
+  const handleLikeClick = () => {
+    setLikeActive(!likeActive);
+    console.log(*Post liked! New like status: $*{!likeActive}*);
+  };
+
+  const handleCommentClick = () => {
+    setShowComment(!showComment);
+    console.log(*Comment section opened! New comment status: $*{showComment}*);
+  };
+
+  const handleCollabClick = () => {
+    console.log(*Collaborate button clicked for post by $*{name}*);
+  };
+
+  const handleInvestClick = () => {
+    console.log(*Invest button clicked for post by $*{name}*);
+  };
+
+  const handleCommentSubmit = () => {
+    console.log(*Comment submitted: $*{commentText}*);
+    setCommentText(''); // Reset comment text after submitting
+  };
+
+  return (
+    <div className="border p-4 mb-4">
+      {/* Konten feed sesuai dengan kebutuhan */}
+      
+      {/* Likes and Comments */}
+      <div className="flex mt-3 text-gray-600">
+        <div className="flex items-center mr-4">
+          {/* Konten tombol Like dan Likes */}
+          <svg
+            onClick={handleLikeClick}
+            className={*w-5 h-5 mr-1 $*{likeActive ? 'text-red-500' : 'text-blue-500'}*}
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M12 6V4M12 4C7 4 2 7.58172 2 12C2 16.4183 7 20 12 20C17 20 22 16.4183 22 12C22 7.58172 17 4 12 4Z"></path>
+          </svg>
+          {likes} Likes
+        </div>
+        <div className="flex items-center">
+          {/* Tombol Comments diubah menjadi text area ketika diklik */}
+          {showComment ? (
+            <div>
+              <textarea
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+                placeholder="Type your comment here..."
+                value={commentText}
+                onChange={(e) => setCommentText(e.target.value)}
+              ></textarea>
+              <button
+                onClick={handleCommentSubmit}
+                className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+              >
+                Comment
+              </button>
+            </div>
+          ) : (
+            <button onClick={handleCommentClick} className="flex items-center">
+              <svg
+                className="w-5 h-5 mr-1 text-green-500 cursor-pointer"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M5 13l4 4L19 7"></path>
+              </svg>
+              {comments} Comments
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* Investment Progress */}
+      {typeof investmentProgress !== 'undefined' && (
+        <div className="mt-3">
+          {/* Konten investment progress */}
+        </div>
+      )}
+
+      {/* Investment Total */}
+      {typeof investmentTotal !== 'undefined' && (
+        <div className="mt-3">
+          {/* Konten investment total */}
+        </div>
+      )}
+
+      {/* Collaborate Button */}
+      <button onClick={handleCollabClick} className="mt-3 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+        Collaborate
+      </button>
+
+      {/* Invest Button */}
+      <button onClick={handleInvestClick} className="mt-3 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
+        Invest
+      </button>
+    </div>
+  );
+};
+
+export default Feed;
+        `;
+
+      let code3 = `
+        import React, { useState } from 'react';
+
+interface InputFeedProps {
+  username: string;
+  isPublic: boolean;
+  handleFileChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handlePost: (isPublic: boolean, content: string) => void;
+}
+
+const InputFeed: React.FC<InputFeedProps> = ({ username, isPublic, handleFileChange, handlePost }) => {
+  const [content, setContent] = useState('');
+  const [selected, setSelected] = useState(isPublic);
+
+  const handlePostClick = () => {
+    handlePost(selected, content);
+  };
+
+  return (
+    <section className={*p-6 bg-white rounded-md shadow-md text-gray-700 $*{selected ? 'border-2 border-blue-400' : ''}*}>
+      <h1>{username}</h1>
+      <p>{selected ? 'Selected' : 'Public'}</p>
+      <form>
+        <div className="grid grid-cols-1">
+          <div>
+            <label className="text-gray-700" htmlFor="username">
+              What's on Your Mind?
+            </label>
+            <input
+              id="username"
+              type="text"
+              className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+            />
+          </div>
+          <div className="mt-4">
+            <label className="text-gray-700" htmlFor="privacy">
+              Share as:
+            </label>
+            <select
+              id="privacy"
+              className="block w-full mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+              value={selected ? 'public' : 'private'}
+              onChange={(e) => setSelected(e.target.value === 'public')}
+            >
+              <option value="public">Public</option>
+              <option value="private">Private</option>
+            </select>
           </div>
         </div>
+        <div className="flex justify-between mt-6">
+          <input type="file" onChange={handleFileChange} />
+          <button
+            className={*px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600 $*{
+              selected ? 'bg-blue-400' : ''
+            }*}
+            onClick={handlePostClick}
+          >
+            {selected ? 'Selected' : 'Post'}
+          </button>
+        </div>
+      </form>
+    </section>
+  );
+};
+
+export default InputFeed;
+        `;
+
+      let code4 = `
+        // import React from 'react'
+// import Navbar from '~/components/navbar'
+// import Sidebar from '~/components/sidebar'
+
+// type Props = {}
+
+// const index = (props: Props) => {
+//   return (
+//     <>
+//       {/* <Navbar />
+//     <Sidebar /> */}
+//       <div className="flex">
+//         <Sidebar />
+//         <div className="container p-4 mx-auto bg-red-500 mt-20 h-[90vh] overscroll-contain">
+//           <h1>Halo</h1>
+//           <div className="h-[100vh] bg-purple-500">
+//             tes
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   )
+// }
+
+// export default index
+
+
+import React, { ReactNode } from 'react';
+import Navbar from './navbar';
+import Sidebar from '~/components/sidebar';
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <>
+      <Navbar />
+      <div className="flex">
+        <Sidebar />
+        <main className="flex-1 overflow-y-auto">
+          {children}
+        </main>
+      </div>
+    </>
+  );
+};
+
+export default Layout;
+        `;
+
+      let code5 = `
+        // import React, { useState } from 'react';
+
+// interface ModalProps {
+//   isOpen: boolean;
+//   onClose: () => void;
+// }
+
+// const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+//   const [isModalOpen, setIsModalOpen] = useState(isOpen);
+
+//   const handleCloseModal = () => {
+//     setIsModalOpen(false);
+//     onClose();
+//   };
+
+//   return (
+//     <>
+//       {isModalOpen && (
+//         <div className="fixed inset-0 z-10 flex items-center justify-center w-screen h-screen bg-gray-500 bg-opacity-50">
+//           <div className="bg-white rounded-lg shadow-lg p-6">
+//             <div className="flex justify-end">
+//               <button
+//                 className="text-gray-500 hover:text-gray-700 focus:outline-none"
+//                 onClick={handleCloseModal}
+//               >
+//                 <svg
+//                   className="w-6 h-6"
+//                   fill="none"
+//                   strokeLinecap="round"
+//                   strokeLinejoin="round"
+//                   strokeWidth="2"
+//                   viewBox="0 0 24 24"
+//                   stroke="currentColor"
+//                 >
+//                   <path d="M6 18L18 6M6 6l12 12"></path>
+//                 </svg>
+//               </button>
+//             </div>
+//             <div>{children}</div>
+//           </div>
+//         </div>
+//       )}
+//     </>
+//   );
+// };
+
+// export default Modal;
+
+// Modal.tsx
+import React, { ReactNode } from 'react';
+
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  children: ReactNode;
+}
+
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+  if (!isOpen) {
+    return null; // Jika modal tidak terbuka, tampilkan null (tidak tampil apa-apa)
+  }
+
+  return (
+    <div className="modal fixed top-0 w-full bg-black bg-opacity-75 h-screen flex justify-center item-center">
+      <div className="modal-content bg-white p-4">
+        {children}
+      </div>
+      <button onClick={onClose}>Close Modal</button>
+    </div>
+  );
+};
+
+export default Modal;
+
+        `;
+
+      let code6 = `
+        // import React from 'react';
+// import Link from 'next/link';
+// import { useRouter } from 'next/router';
+
+// const Navbar: React.FC = () => {
+//   const router = useRouter();
+
+//   return (
+//     <nav className="bg-gray-800 p-4 fixed top-0 w-full z-10">
+//       <ul className="flex items-center justify-between">
+//         <li>
+//           <Link href="/">
+//             <span className="text-white font-bold text-xl">Logo</span>
+//           </Link>
+//         </li>
+//         <li>
+//           <ul className="flex space-x-4">
+//             <li className={router.pathname === '/home' ? 'text-white' : 'text-gray-300'}>
+//               <Link href="/home">
+//                 <span>Home</span>
+//               </Link>
+//             </li>
+//             <li className={router.pathname === '/explore' ? 'text-white' : 'text-gray-300'}>
+//               <Link href="/explore">
+//                 <span>Explore</span>
+//               </Link>
+//             </li>
+//             <li className={router.pathname === '/find' ? 'text-white' : 'text-gray-300'}>
+//               <Link href="/find">
+//                 <span>Find</span>
+//               </Link>
+//             </li>
+//           </ul>
+//         </li>
+//       </ul>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+const Navbar: React.FC = () => {
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <nav className="bg-gray-800 p-4 fixed top-0 w-full z-10">
+      <div className="flex items-center justify-between">
+        <Link href="/">
+          <span className="text-white font-bold text-xl cursor-pointer">Logo</span>
+        </Link>
+        <div className="md:hidden">
+          <button
+            className="text-white focus:outline-none"
+            onClick={handleToggleMenu}
+            aria-label="Toggle Menu"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul
+          className={*hidden md:flex items-center space-x-4 $*{
+            isOpen ? 'flex' : 'hidden'
+          } transition-all duration-300*}
+        >
+          <li className={router.pathname === '/home' ? 'text-white' : 'text-gray-300'}>
+            <Link href="/home">
+              <span>Home</span>
+            </Link>
+          </li>
+          <li className={router.pathname === '/explore' ? 'text-white' : 'text-gray-300'}>
+            <Link href="/explore">
+              <span>Explore</span>
+            </Link>
+          </li>
+          <li className={router.pathname === '/find' ? 'text-white' : 'text-gray-300'}>
+            <Link href="/find">
+              <span>Find</span>
+            </Link>
+          </li>
+        </ul>
+      </div>
+      {isOpen && (
+        <div
+          className="md:hidden absolute top-0 left-0 w-full h-screen bg-gray-800 p-4 transition-all duration-300"
+        >
+          <ul className="flex flex-col space-y-4">
+            <li>
+            <button
+            className="text-white focus:outline-none"
+            onClick={handleToggleMenu}
+            aria-label="Toggle Menu"
+          >
+              Close X
+
+            </button>
+            </li>
+            <li>
+              <Link href="/home">
+                <span className="text-white cursor-pointer">Home Mobile</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/explore">
+                <span className="text-white cursor-pointer">Explore</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/find">
+                <span className="text-white cursor-pointer">Find</span>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
+        `;
+
+      let code7 = `
+        // import React from 'react';
+
+// interface ProfileData {
+//   id: number;
+//   name: string;
+//   status: 'online' | 'offline';
+// }
+
+// interface ProfileListProps {
+//   profiles: ProfileData[];
+// }
+
+// const ProfileList: React.FC<ProfileListProps> = ({ profiles }) => {
+//   return (
+//     <div>
+//       <h2>List of Profiles</h2>
+//       <ul>
+//         {profiles.map((profile) => (
+//           <li key={profile.id}>
+//             {profile.name} - {profile.status === 'online' ? 'Online' : 'Offline'}
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+
+// export default ProfileList;
+import React from 'react';
+
+interface ProfileData {
+  id: number;
+  name: string;
+  // status: 'online' | 'offline';
+  status: string;
+}
+
+interface ProfileListProps {
+  profiles: ProfileData[];
+}
+
+const ProfileList: React.FC<ProfileListProps> = ({ profiles }) => {
+  return (
+    <div>
+      <h2>List of Profiles</h2>
+      <ul>
+        {profiles.map((profile) => (
+          <li key={profile.id}>
+            {profile.name} - {profile.status === 'online' ? 'Online' : 'Offline'}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ProfileList;
+        `;
+
+      let code8 = `
+        // // Sidebar.tsx
+// import React from 'react';
+
+// interface SidebarProps {
+//   setActiveMenu: (menu: string) => void;
+// }
+
+// const Sidebar: React.FC<SidebarProps> = ({ setActiveMenu }) => {
+//   const handleMenuClick = (menu: string) => {
+//     setActiveMenu(menu);
+//   };
+
+//   return (
+//     <div className="bg-blue-600 text-white h-screen w-16 fixed top-0 left-0 flex flex-col justify-between items-center">
+//       <button className="py-4 mt-8 focus:outline-none" onClick={() => handleMenuClick('dashboard')}>
+//         <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+//           {/* Add dashboard icon here */}
+//         </svg>
+//         Dashboard
+//       </button>
+//       <button className="py-4 focus:outline-none" onClick={() => handleMenuClick('profile')}>
+//         <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+//           {/* Add profile icon here */}
+//         </svg>
+//         Profile
+//       </button>
+//       <button className="py-4 focus:outline-none" onClick={() => handleMenuClick('logout')}>
+//         <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+//           {/* Add logout icon here */}
+//         </svg>
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default Sidebar;
+import React from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+const Sidebar: React.FC = () => {
+  const router = useRouter();
+
+  return (
+    // <aside className="bg-gray-100 w-64 h-screen p-4 fixed top-0 z-10">
+    <aside className="bg-gray-100 w-64 p-4 h-screen sticky top-0">
+      <nav className='mt-20'>
+        <ul>
+          <li className={router.pathname === '/dashboard' ? 'bg-slate-50' : ''}>
+            <Link href="/dashboard">
+              <span className="block px-4 py-2 rounded">Dashboard</span>
+            </Link>
+          </li>
+          <li className={router.pathname === '/campign-crowdfunding' ? 'bg-slate-50' : ''}>
+            <Link href="/campign-crowdfunding">
+              <span className="block px-4 py-2 rounded">Campign Crowdfunding</span>
+            </Link>
+          </li>
+          <li className={router.pathname === '/notifications' ? 'bg-slate-50' : ''}>
+            <Link href="/notifications">
+              <span className="block px-4 py-2 rounded">Notifications</span>
+            </Link>
+          </li>
+          <li className={router.pathname === '/messages' ? 'bg-slate-50' : ''}>
+            <Link href="/messages">
+              <span className="block px-4 py-2 rounded">Messages</span>
+            </Link>
+          </li>
+          <li className={router.pathname === '/incubator-access' ? 'bg-slate-50' : ''}>
+            <Link href="/incubator-access">
+              <span className="block px-4 py-2 rounded">Incubator Access</span>
+            </Link>
+          </li>
+          <li className={router.pathname === '/incubation' ? 'bg-slate-50' : ''}>
+            <Link href="/incubation">
+              <span className="block px-4 py-2 rounded">Incubation</span>
+            </Link>
+          </li>
+          <li className={router.pathname === '/my-events' ? 'bg-slate-50' : ''}>
+            <Link href="/my-events">
+              <span className="block px-4 py-2 rounded">My Events</span>
+            </Link>
+          </li>
+          <li className={router.pathname === '/settings' ? 'bg-slate-50' : ''}>
+            <Link href="/settings">
+              <span className="block px-4 py-2 rounded">Settings</span>
+            </Link>
+          </li>
+
+        </ul>
       </nav>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-</body>
+    </aside>
+  );
+};
+
+export default Sidebar;
+        
+        `;
+
+      let code9 = `
+        import React from 'react';
+
+interface UserCardProps {
+  photo: string;
+  name: string;
+  role: string;
+  specialization: string;
+  isOnline: boolean;
+  onMessageClick: () => void;
+  onCollabClick: () => void;
+}
+
+const UserCard: React.FC<UserCardProps> = ({
+  photo,
+  name,
+  role,
+  specialization,
+  isOnline,
+  onMessageClick,
+  onCollabClick,
+}) => {
+  return (
+    <div className="bg-white rounded-md shadow-md p-4">
+      <img className="w-24 h-24 object-cover rounded-full mx-auto mb-4" src={photo} alt={name} />
+      <h2 className="text-lg font-bold text-center">{name}</h2>
+      <p className="text-gray-500 text-center">{role}</p>
+      <p className="text-center">{specialization}</p>
+      <div className="flex justify-center mt-4">
+        {isOnline ? (
+          <span className="px-4 py-2 bg-green-500 text-white rounded-md">Online</span>
+        ) : (
+          <span className="px-4 py-2 bg-red-500 text-white rounded-md">Offline</span>
+        )}
+      </div>
+      <div className="flex justify-between mt-6">
+        <button
+          className="px-4 py-2 bg-blue-500 text-white rounded-md mr-2"
+          onClick={onMessageClick}
+        >
+          Message
+        </button>
+        <button
+          className="px-4 py-2 bg-indigo-500 text-white rounded-md"
+          onClick={onCollabClick}
+        >
+          Collab
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default UserCard;
+        `;
+
+      document.getElementById("code1").innerText = code1;
+      document.getElementById("code2").innerText = code2;
+      document.getElementById("code3").innerText = code3;
+      document.getElementById("code4").innerText = code4;
+      document.getElementById("code5").innerText = code5;
+      document.getElementById("code6").innerText = code6;
+      document.getElementById("code7").innerText = code7;
+      document.getElementById("code8").innerText = code8;
+      document.getElementById("code9").innerText = code9;
+    </script>
+  </body>
 </html>
