@@ -258,6 +258,50 @@
                 </div>
               </div>
             </li>
+            <li>
+              <h2>Create Camp</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code10coll"
+                  aria-expanded="false"
+                  aria-controls="code10coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code10coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code10"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <h2>Proflie</h2>
+              <p>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#code11coll"
+                  aria-expanded="false"
+                  aria-controls="code11coll"
+                >
+                  Show Code
+                </button>
+              </p>
+              <div style="min-height: 120px">
+                <div class="collapse collapse-horizontal" id="code11coll">
+                  <div class="card card-body w-full bg-dark text-white">
+                    <span id="code11"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
           </ol>
         </div>
       </section>
@@ -2337,6 +2381,240 @@ export default LandingPage;
         
         `;
 
+
+        let code10 = `
+        import React, { useState } from 'react';
+
+interface CreateCampaignProps {
+  onSubmit: (formData: CampaignFormData) => void;
+}
+
+interface CampaignFormData {
+  title: string;
+  targetAmount: number;
+  description: string;
+  image: string;
+}
+
+const CreateCampaign: React.FC<CreateCampaignProps> = ({ onSubmit }) => {
+  const [formData, setFormData] = useState<CampaignFormData>({
+    title: '',
+    targetAmount: 0,
+    description: '',
+    image: '',
+  });
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    onSubmit(formData);
+  };
+
+  return (
+    <div>
+      <h1>Create Campaign</h1>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="title">Title:</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            value={formData.title}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="targetAmount">Target Amount:</label>
+          <input
+            type="number"
+            id="targetAmount"
+            name="targetAmount"
+            value={formData.targetAmount}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="description">Description:</label>
+          <textarea
+            id="description"
+            name="description"
+            value={formData.description}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="image">Image URL:</label>
+          <input
+            type="text"
+            id="image"
+            name="image"
+            value={formData.image}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button type="submit">Create Campaign</button>
+      </form>
+    </div>
+  );
+};
+
+export default CreateCampaign;
+
+        `;
+
+
+        let code11 = `
+
+        import React, { useState } from 'react';
+
+interface UserProfile {
+  name: string;
+  email: string;
+  address: string;
+  postCode: string;
+  rating: number;
+}
+
+const Profile: React.FC = () => {
+  const [userProfile, setUserProfile] = useState<UserProfile>({
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+    address: '123 Main Street',
+    postCode: '12345',
+    rating: 4.5,
+  });
+
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-semibold mb-4">User Profile</h2>
+      <div className="mb-2">
+        <strong>Name:</strong> {userProfile.name}
+      </div>
+      <div className="mb-2">
+        <strong>Email:</strong> {userProfile.email}
+      </div>
+      <div className="mb-2">
+        <strong>Address:</strong> {userProfile.address}
+      </div>
+      <div className="mb-2">
+        <strong>Post Code:</strong> {userProfile.postCode}
+      </div>
+      <div>
+        <strong>Rating:</strong> {userProfile.rating}
+      </div>
+      <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+        Edit Profile
+      </button>
+    </div>
+  );
+};
+
+export default Profile;
+
+
+
+=======
+
+
+import React, { useState } from 'react';
+
+interface UserProfile {
+  name: string;
+  email: string;
+  address: string;
+  postCode: string;
+  rating: number;
+}
+
+interface EditProfileProps {
+  userProfile: UserProfile;
+  onSave: (updatedProfile: UserProfile) => void;
+}
+
+const EditProfile: React.FC<EditProfileProps> = ({ userProfile, onSave }) => {
+  const [name, setName] = useState(userProfile.name);
+  const [email, setEmail] = useState(userProfile.email);
+  const [address, setAddress] = useState(userProfile.address);
+  const [postCode, setPostCode] = useState(userProfile.postCode);
+
+  const handleSave = () => {
+    const updatedProfile: UserProfile = {
+      name,
+      email,
+      address,
+      postCode,
+      rating: userProfile.rating,
+    };
+
+    onSave(updatedProfile);
+  };
+
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-semibold mb-4">Edit Profile</h2>
+      <div className="mb-2">
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </div>
+      <div className="mb-2">
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </div>
+      <div className="mb-2">
+        <label htmlFor="address">Address:</label>
+        <input
+          type="text"
+          id="address"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+        />
+      </div>
+      <div className="mb-2">
+        <label htmlFor="postCode">Post Code:</label>
+        <input
+          type="text"
+          id="postCode"
+          value={postCode}
+          onChange={(e) => setPostCode(e.target.value)}
+        />
+      </div>
+      <button
+        onClick={handleSave}
+        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+      >
+        Save
+      </button>
+    </div>
+  );
+};
+
+export default EditProfile;
+
+        
+        `;
+
       document.getElementById("code1").innerText = code1;
       document.getElementById("code2").innerText = code2;
       document.getElementById("code3").innerText = code3;
@@ -2346,6 +2624,8 @@ export default LandingPage;
       document.getElementById("code7").innerText = code7;
       document.getElementById("code8").innerText = code8;
       document.getElementById("code9").innerText = code9;
+      document.getElementById("code10").innerText = code10;
+      document.getElementById("code11").innerText = code11;
     </script>
   </body>
 </html>

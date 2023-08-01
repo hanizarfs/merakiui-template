@@ -256,7 +256,7 @@
             <div style="min-height: 120px">
               <div class="collapse collapse-horizontal" id="code9coll">
                 <div class="card card-body w-full bg-dark text-white">
-                  <span id="code89"></span>
+                  <span id="code9"></span>
                 </div>
               </div>
             </div>
@@ -1229,63 +1229,81 @@ export default ProfileList;
         `;
 
       let code8 = `
-        // // Sidebar.tsx
-// import React from 'react';
-
-// interface SidebarProps {
-//   setActiveMenu: (menu: string) => void;
-// }
-
-// const Sidebar: React.FC<SidebarProps> = ({ setActiveMenu }) => {
-//   const handleMenuClick = (menu: string) => {
-//     setActiveMenu(menu);
-//   };
-
-//   return (
-//     <div className="bg-blue-600 text-white h-screen w-16 fixed top-0 left-0 flex flex-col justify-between items-center">
-//       <button className="py-4 mt-8 focus:outline-none" onClick={() => handleMenuClick('dashboard')}>
-//         <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-//           {/* Add dashboard icon here */}
-//         </svg>
-//         Dashboard
-//       </button>
-//       <button className="py-4 focus:outline-none" onClick={() => handleMenuClick('profile')}>
-//         <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-//           {/* Add profile icon here */}
-//         </svg>
-//         Profile
-//       </button>
-//       <button className="py-4 focus:outline-none" onClick={() => handleMenuClick('logout')}>
-//         <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-//           {/* Add logout icon here */}
-//         </svg>
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default Sidebar;
-import React from 'react';
+      mport React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const Sidebar: React.FC = () => {
   const router = useRouter();
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setShowDropdown(!showDropdown);
+  };
 
   return (
-    // <aside className="bg-gray-100 w-64 h-screen p-4 fixed top-0 z-10">
     <aside className="bg-gray-100 w-64 p-4 h-screen sticky top-0">
-      <nav className='mt-20'>
+      <nav className="mt-20">
         <ul>
           <li className={router.pathname === '/dashboard' ? 'bg-slate-50' : ''}>
             <Link href="/dashboard">
               <span className="block px-4 py-2 rounded">Dashboard</span>
             </Link>
           </li>
-          <li className={router.pathname === '/campign-crowdfunding' ? 'bg-slate-50' : ''}>
-            <Link href="/campign-crowdfunding">
-              <span className="block px-4 py-2 rounded">Campign Crowdfunding</span>
-            </Link>
+          <li
+            className={*relative $*{router.pathname === '/campign-crowdfunding' ? 'bg-slate-50' : ''}*}
+          >
+            <span
+              className="block px-4 py-2 rounded cursor-pointer"
+              onClick={handleDropdownToggle}
+            >
+              Campaign Crowdfunding
+              {showDropdown ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 inline-block ml-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 inline-block ml-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              )}
+            </span>
+            {showDropdown && (
+              <ul className="mt-2 pl-6">
+                <li className={router.pathname === '/campaigns' ? 'bg-slate-50' : ''}>
+                  <Link href="/campaigns">
+                    <span className="block px-4 py-2 rounded">My Projects</span>
+                  </Link>
+                </li>
+                <li className={router.pathname === '/ideas' ? 'bg-slate-50' : ''}>
+                  <Link href="/ideas">
+                    <span className="block px-4 py-2 rounded">My Ideas</span>
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
           <li className={router.pathname === '/notifications' ? 'bg-slate-50' : ''}>
             <Link href="/notifications">
@@ -1317,7 +1335,6 @@ const Sidebar: React.FC = () => {
               <span className="block px-4 py-2 rounded">Settings</span>
             </Link>
           </li>
-
         </ul>
       </nav>
     </aside>
@@ -1325,7 +1342,7 @@ const Sidebar: React.FC = () => {
 };
 
 export default Sidebar;
-        
+
         `;
 
       let code9 = `
